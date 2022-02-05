@@ -53,8 +53,8 @@ body {
 }
 
 .nav__menu-item:hover {
-  color: #212353;
-  font-weight: 800;
+  color: #000000;
+  /* font-weight: 800; */
   transform: scale(1.1);
 }
 
@@ -475,22 +475,53 @@ color: #212353;
 max-width: 300px;
 }
 
-#help .share {
-  min-width: 15vw;
+#help .share h4{
+  max-width: 15vw;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 2rem;
+
+  color: #212353;
 }
 
 #help .share .sm__list {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0;
+  gap: 15px;
+  margin-top: 40px;
   padding: 0;
 }
 
-#help .share .sm__list li  {
+#help .share .sm__list .sm  {
+  display: inline-block;
   width: 50px;
   height: 50px;
-  background: rgb(126, 126, 126);
+  background-color: rgb(211, 211, 211);
   border-radius: 50%;
+  background-repeat:  no-repeat;
+  background-position:  center;
+  background-size: unset;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out,
+              transform 0.5s linear;
+}
 
+#help .share .sm__list .sm:hover {
+  background-color: rgb(90, 90, 90);
+  box-shadow: 0px 5px 5px #4B5D68;
+  transform: rotate(360deg);
+}
+
+#help .share .sm__list .sm.fb {
+  background-image: url('img/share/facebook.svg'); 
+}
+
+#help .share .sm__list .sm.tw {
+  background-image: url('img/share/twitter.svg'); 
+}
+
+#help .share .sm__list .sm.ig {
+  background-image: url('img/share/instagram.svg'); 
 }
