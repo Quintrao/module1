@@ -320,6 +320,16 @@ section {
   border-radius: 20px;
 
   position: relative;
+  transition: all 0.2s ease-in;
+}
+
+#testimonials .testimonials__item.active {
+  box-shadow: 0px 20px 0px rgba(115, 78, 167, 0.6);
+}
+
+#testimonials .testimonials__item:hover {
+  box-shadow: 0px 20px 0px rgba(115, 78, 167, 0.8);
+  background: #e7e7e7;
 }
 
 #testimonials .testimonial__userpic{
@@ -406,10 +416,14 @@ color: #4B5D68;
 }
 
 
+
 #help {
-  
-  display: flex;
   border-top: 2px solid #9c69e2;
+  width: 100%;
+}
+
+#help .container {
+  display: flex;  
   padding-top: 150px;
   justify-content: space-between;
   align-self: baseline;
@@ -437,7 +451,7 @@ color: #4B5D68;
 
 #help .adress {
   margin-top: 60px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px; 
   color: #212353;
 }
@@ -459,4 +473,24 @@ color: #4B5D68;
 line-height: 180%;
 color: #212353;
 max-width: 300px;
+}
+
+#help .share {
+  min-width: 15vw;
+}
+
+#help .share .sm__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+#help .share .sm__list li  {
+  width: 50px;
+  height: 50px;
+  background: rgb(126, 126, 126);
+  border-radius: 50%;
+
 }
