@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
+:root {
+  --primary-text-color: #212353;
+  --smaller-text-color: #4b5d68;
+  --basic-font-size: 16px;
+}
+
 body {
   background-color: #e5e5e5;
   margin: 0;
@@ -7,7 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-size: var(--basic-font-size);
   box-sizing: border-box;
   max-width: 100vw;
   scroll-behavior: smooth;
@@ -19,15 +26,14 @@ body {
 }
 
 .title {
-  font-size: 40px;
-  line-height: 52px;
-  color: #212353;
+  font-size: 2.5rem;
+  color: var(--primary-text-color);
 }
 
 .text {
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 2rem;
-  color: #4b5d68;
+  color: var(--smaller-text-color);
 }
 
 .header {
@@ -51,9 +57,8 @@ body {
   margin: 0 20px;
   text-decoration: none;
   display: inline-block;
-  color: #4b5d68;
-  font-size: 16px;
-  line-height: 160%;
+  color: var(--smaller-text-color);
+  font-size: var(--basic-font-size);
   font-weight: 500;
   transition: transform 0.1s ease;
 }
@@ -63,8 +68,7 @@ body {
 }
 
 .nav__menu-item:hover {
-  color: #000000;
-  /* font-weight: 800; */
+  font-weight: 800;
   transform: scale(1.1);
 }
 
@@ -80,25 +84,25 @@ section {
 }
 
 .offer__info {
-  width: 50%;
+  width: 55%;
 }
 
 .offer__info_title {
-  font-size: 80px;
-  line-height: 88px;
-  color: #212353;
+  font-size: 5rem;
+  line-height: 1.2em;
+  color: var(--primary-text-color);
 }
 
 .offer__info_text {
-  font-size: 18px;
+  font-size: 1.1rem;
   margin: 50px 0;
   line-height: 2rem;
-  color: #4b5d68;
-  max-width: 60%;
+  color: var(--smaller-text-color);
+  max-width: 62%;
 }
 
 .offer__info-btn {
-  font-size: 18px;
+  font-size: 1.1rem;
   text-decoration: none;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -118,12 +122,13 @@ section {
   background: url("img/image1.png") no-repeat;
   position: absolute;
   width: 60vw;
-  bottom: -20%;
-  right: -15%;
+  bottom: -30%;
+  right: -20%;
   height: 70vh;
 }
 
 .description {
+  margin-top: 200px;
   display: flex;
   position: relative;
   background-color: rgba(240, 99, 184, 0.15);
@@ -142,12 +147,13 @@ section {
 }
 
 .description__info {
-  width: 50%;
+  width: 55%;
   padding: 100px;
 }
 
 .description__info_title {
   margin-bottom: 40px;
+  line-height: 1.5em;
 }
 
 
@@ -160,6 +166,7 @@ section {
 .features__text {
   max-width: 48%;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .features-list {
@@ -168,6 +175,7 @@ section {
   flex-wrap: wrap;
   list-style: none;
   justify-content: space-around;
+  gap: 3rem;
 }
 
 .feature-item {
@@ -175,9 +183,8 @@ section {
   max-width: 50%;
   display: flex;
   justify-content: space-between;
-  margin-right: 45px;
-  background-position: bottom right;
-  background-size: 85%;
+  background-position: right;
+  background-size: 90% 100%;
   background-repeat: no-repeat;
 }
 
@@ -185,43 +192,40 @@ section {
   width: 200px;
   height: 200px;
   position: absolute;
-  left: 0px;
-  top: 40%;
+  left: -10%;
+  top: 25%;
   z-index: -1;
-  background-size: 75%;
+  background-size: 95%;
   background-repeat: no-repeat;
 }
 
 .feature-item_content {
-  display: flex;
-  flex-direction: column;
   margin-left: 10vw;
-  margin-top: 20px;
-  padding: 30px;
-  width: 50%;
-  justify-content: space-between;
+  padding: 20px;
+  width: 55%;
 }
 
 .feature-item__title {
-  font-size: 24px;
-  line-height: 1.5rem;
-  color: #212353;
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
 }
 
 .feature-item__text {
   font-size: 16px;
-  line-height: 1.5rem;
-  color: #4b5d68;
+  line-height: 1.7rem;
+  color: var(--smaller-text-color);
   max-width: 220px;
+  padding-bottom: 1rem ;
 }
 
 .feature-item__ref {
   font-weight: 900;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
-  color: #212353;
+  color: var(--primary-text-color);
   text-decoration: none;
-  position: relative;
+  position: absolute;
+  bottom: 1rem;
   transition: transform 0.2s ease-in;
 }
 
@@ -231,7 +235,7 @@ section {
   width: 22px;
   height: 16px;
   position: absolute;
-  left: 50%;
+  right: -50%;
   top: 25%;
   transition: transform 0.2s ease-in;
 }
@@ -288,8 +292,7 @@ section {
   color: white;
   padding: 10vh 5vw;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 130%;
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -341,8 +344,7 @@ section {
 
 .testimonial__site {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 160%;
+  font-size: 0.9rem;
   color: #9c69e2;
   margin-top: 0;
   padding-top: 0;
@@ -351,9 +353,9 @@ section {
 .testimonial__text {
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 180%;
-  color: #4b5d68;
+  color: var(--smaller-text-color);
 }
 
 .testimonials__item::before {
@@ -424,7 +426,7 @@ section {
 .contacts__list{
   list-style: none;
   font-size: 16px;
-  color: #212353;
+  color: var(--primary-text-color);
   line-height: 1.5rem;
   margin: 0;
   padding: 0;
@@ -439,16 +441,16 @@ section {
 }
 
 .company-name {
-  color: #212353;
-  font-size: 20px;
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
   font-weight: 900;
 }
 
 #help .adress {
   margin-top: 60px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #212353;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--primary-text-color);
 }
 
 .contacts__mail p,
@@ -458,19 +460,19 @@ section {
 }
 
 .contacts__copyright {
-  font-size: 12px;
+  font-size: 0.6rem;
   line-height: 180%;
-  color: #212353;
+  color: var(--primary-text-color);
   max-width: 300px;
+  margin: 40px 0;
 }
 
 .share__title {
   max-width: 15vw;
   font-weight: 900;
-  font-size: 16px;
-  line-height: 2rem;
+  font-size: 1rem;
 
-  color: #212353;
+  color: var(--primary-text-color);
 }
 
 .sm__list {
@@ -498,7 +500,7 @@ section {
 
 .sm:hover {
   background-color: rgb(90, 90, 90);
-  box-shadow: 0px 5px 5px #4b5d68;
+  box-shadow: 0px 5px 5px var(--smaller-text-color);
   transform: translateY(-15px) rotate(360deg);
 }
 
