@@ -156,7 +156,6 @@ section {
   line-height: 1.5em;
 }
 
-
 .features {
   display: flex;
   flex-direction: column;
@@ -215,7 +214,7 @@ section {
   line-height: 1.7rem;
   color: var(--smaller-text-color);
   max-width: 220px;
-  padding-bottom: 1rem ;
+  padding-bottom: 1rem;
 }
 
 .feature-item__ref {
@@ -308,7 +307,8 @@ section {
   width: 60%;
   min-width: 40vw;
   height: 330px;
-  margin-right: 2rem;
+  --offset: 2rem;
+  margin-right: var(--offset);
 
   background: #ffffff;
   box-shadow: 0px 20px 0px rgba(115, 78, 167, 0.3);
@@ -367,12 +367,27 @@ section {
   background: #fff;
   bottom: -40px;
   cursor: pointer;
-  left: 0;
 }
 
 .active::before {
   display: none;
 }
+
+.testimonials__item:nth-child(2)::before {
+  
+  left: -102%;
+
+} 
+
+.testimonials__item:nth-child(3)::before {
+  left: -205%;
+
+} 
+
+.testimonials__item:nth-child(4)::before {
+  left: -308%;
+
+} 
 
 .active::after {
   content: "";
@@ -381,12 +396,11 @@ section {
   height: 10px;
   border-radius: 50px;
   background: #f063b8;
-  bottom: -40px;
+  bottom: -42px;
   cursor: pointer;
   left: 0;
+  
 }
-
-
 
 .testimonials button {
   background: transparent;
@@ -423,7 +437,7 @@ section {
   justify-content: space-between;
 }
 
-.contacts__list{
+.contacts__list {
   list-style: none;
   font-size: 16px;
   color: var(--primary-text-color);
@@ -435,7 +449,7 @@ section {
 .contacts__logo_and_name {
   display: flex;
   justify-content: flex-start;
-  align-items:center;
+  align-items: center;
 
   gap: 20px;
 }
@@ -454,7 +468,7 @@ section {
 }
 
 .contacts__mail p,
-.contacts__phone p{
+.contacts__phone p {
   font-weight: 400;
   margin: 0;
 }
