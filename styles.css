@@ -197,7 +197,6 @@ section {
   position: absolute;
   left: -5%;
   top: 30%;
-  z-index: -1;
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -277,7 +276,6 @@ section {
 
 .security-code {
   background-image: url("img/features/security_bg1.png");
-  z-index: -1;
 }
 
 .security-code_img {
