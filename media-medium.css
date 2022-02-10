@@ -59,9 +59,6 @@
   .feature-item { 
     min-width: 35vw; 
     max-width: 80vw;
-    /* height: 60vh; */
-    /* max-width: 70vw; */
-    /* background-position: right; */
   } 
 
  .feature-item_img {
